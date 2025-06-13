@@ -49,7 +49,7 @@ outline: none;
 
 .calculator-container button {
 background-color:
-Orgb(89, 82, 209); /* Accent color for calculator button */
+rgb(89, 82, 209); /* Accent color for calculator button */
 color:
 white;
 padding: 14px 25px;
