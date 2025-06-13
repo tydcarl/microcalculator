@@ -47,6 +47,18 @@ border-color: rgb(89, 82, 209);
 outline: none;
 }
 
+.calculator-container button {
+background-color:
+Orgb(89, 82, 209); /* Accent color for calculator button */
+color:
+white;
+padding: 14px 25px;
+border:
+none; border-radius: 8px; cursor: pointer; font-size: 1.1em;
+font-weight: bold; transition: background-color 0.3s ease, transform 0.2s ease;
+width: 100%;
+box-shadow: 0 2px 5px rgba(89，82, 209, 0.3); }
+
 .calculator-container button:hover {
     background-color: rgb(70, 65, 170);
     transform: translateY(-2px);
