@@ -128,4 +128,31 @@ document.addEventListener("DOMContentLoaded", () => {
     carbsGramsSpan.textContent = carbsGrams.toFixed(0);
     fatsGramsSpan.textContent = fatsGrams.toFixed(0);
   }
+function displayMessage(message) {
+    const messageBox = document.createElement("div");
+    messageBox.stlye.cssText = `
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+    z-index: 1000;
+    text-align: center;
+    font-family: 'Inter', Arial, sans-serif;
+    color: #333;
+    font-size: 1.1em;
+    max-width: 300px;
+    line-height: 1.5;   
+    `;
+
+
+    const messageText = document.createElement('p');
+    messageText.textContent = message;
+    messageBox.appendChild(messageText);
+    document.body.appendChild(messageBox);
+ 
+}
 });
