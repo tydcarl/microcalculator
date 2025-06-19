@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 function displayMessage(message) {
     const messageBox = document.createElement("div");
-    messageBox.stlye.cssText = `
+    messageBox.style.cssText = `
     position: fixed;
     top: 50%;
     left: 50%;
@@ -149,9 +149,31 @@ function displayMessage(message) {
     `;
 
 
-    const messageText = document.createElement('p');
+    const messageText = document.createElement("p");
     messageText.textContent = message;
     messageBox.appendChild(messageText);
+
+
+    const closeButton = document.createElement("button ")
+    closeButton.textContent = "ok"
+    closeButton.style.cssText = `
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 14px;
+    font-size 1em;
+    transition: background-color .3s ease;
+    `
+    ;
+    closeButton.onmouseover = () =>
+    (closeButton.style.backgroundColor = "#0056b3");
+    closeButton.onmouseout = () => (closeButton.style.backgoundColor = "#007bff");
+    closeButton.onclick = () => document.body.removeChild(messageBox);
+    messageBox.appendChild(closeButton);
+
     document.body.appendChild(messageBox);
  
 }
